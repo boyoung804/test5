@@ -56,6 +56,14 @@
   .media-link { display:inline-block; margin-top:10px; font-size:12.5px; font-weight:600; color:#fff; background:var(--accent);
     padding:6px 12px; border-radius:8px; text-decoration:none; }
   .media-link:hover { background:#1d4ed8; }
+  .latest-list { display:flex; flex-direction:column; gap:12px; }
+  .view-toggle { display:inline-flex; border:1px solid var(--border); border-radius:8px; overflow:hidden; background:#fff; }
+  .view-btn { border:none; background:#fff; padding:5px 12px; font-size:12.5px; cursor:pointer; color:var(--text-secondary); }
+  .view-btn.active { background:var(--accent); color:#fff; font-weight:600; }
+  .card-title-row { display:flex; align-items:flex-start; gap:10px; }
+  .card-title-row .select-checkbox { margin-top:4px; }
+  .card-title-row .card-title { flex:1; margin:0 0 6px; }
+  .card-summary { white-space:pre-line; }
   .media-name { font-weight:400; opacity:.85; margin-left:4px; }
   .card-top { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
   .badge { font-size:12px; font-weight:600; color:var(--accent); background:var(--accent-bg); padding:3px 10px; border-radius:999px; }
@@ -107,7 +115,13 @@
 
 <main>
   <div id="result-count">
-    <span id="result-count-text"></span>
+    <span style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <span id="result-count-text"></span>
+      <span class="view-toggle">
+        <button id="view-agency" class="view-btn active">부처별</button>
+        <button id="view-latest" class="view-btn">최신순</button>
+      </span>
+    </span>
     <span style="display:flex; gap:10px; align-items:center;">
       <label style="display:flex; align-items:center; gap:4px; font-size:12px; cursor:pointer;">
         <input type="checkbox" id="select-all-checkbox"> 전체선택
@@ -162,6 +176,16 @@
     if (!q) return e;
     return e.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi'), '<mark>$1</mark>');
   }
+
+  function agencyRank(a) {
+    if (a === '대통령실') return 0;
+    if (a.endsWith('실')) return 1;
+    if (a.endsWith('부')) return 2;
+    if (a.endsWith('처')) return 3;
+    return 4;
+  }
+  AGENCIES.sort((a, b) => agencyRank(a) - agencyRank(b) || a.localeCompare(b, 'ko'));
+  let viewMode = 'agency'; // 'agency'(부처별) | 'latest'(최신순)
 
   AGENCIES.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; ministrySelect.appendChild(o); });
   $('agency-count').textContent = AGENCIES.length;
@@ -259,32 +283,39 @@
 
     // 부처(AGENCIES 순서) 별로 묶고, 각 그룹 안에서는 먼저 올라온 기사부터
     // (=배열 뒤쪽이 더 오래된 것이므로 reverse) 순서대로 정렬한다.
+    const cardHtml = (r, showAgency) => `
+      <div class="card" data-link="${escapeHtml(r.link)}">
+        <div class="card-top">
+          ${showAgency ? `<span class="badge">${escapeHtml(r.agency)}</span>` : ''}
+          <span class="card-date">${escapeHtml(r.date)}</span>
+        </div>
+        <div class="card-title-row">
+          <input type="checkbox" class="select-checkbox" data-key="${escapeHtml(r.link)}" ${selectedLinks.has(r.link) ? 'checked' : ''}>
+          <p class="card-title">${highlight(r.title, q)}</p>
+        </div>
+        ${r.summary ? `<p class="card-summary">${highlight(r.summary, q)}</p>` : ''}
+        ${r.media_link ? `<a class="media-link" href="${escapeHtml(r.media_link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">뉴스 바로가기<span class="media-name">(${escapeHtml(r.media_press)})</span> ↗</a>` : ''}
+      </div>`;
+
     if (!filtered.length) {
       resultsEl.innerHTML = '<div class="empty-state">검색 결과가 없습니다.</div>';
+    } else if (viewMode === 'latest') {
+      // 최신순: 부처 구분 없이 저장된 순서(맨 앞이 가장 최근)대로
+      resultsEl.innerHTML = `<div class="latest-list">${filtered.map(r => cardHtml(r, true)).join('')}</div>`;
     } else {
+      // 부처별: 대통령실 > 실 > 부 > 처 순(가나다순), 그룹 안에서는 먼저 올라온 기사부터
       const groupOrder = mf ? [mf] : AGENCIES;
       let html = '';
       groupOrder.forEach(agency => {
         const group = filtered.filter(r => r.agency === agency);
         if (!group.length) return;
-        const ordered = group.slice().reverse(); // 오래된 기사부터
+        const ordered = group.slice().reverse();
         html += `<div class="agency-group">
           <div class="agency-group-header">
             <span class="badge">${escapeHtml(agency)}</span>
             <span class="agency-group-count">${ordered.length}건</span>
           </div>
-          <div class="agency-group-body">
-            ${ordered.map(r => `
-              <div class="card" data-link="${escapeHtml(r.link)}">
-                <div class="card-top">
-                  <input type="checkbox" class="select-checkbox" data-key="${escapeHtml(r.link)}" ${selectedLinks.has(r.link) ? 'checked' : ''}>
-                  <span class="card-date">${escapeHtml(r.date)}</span>
-                </div>
-                <p class="card-title">${highlight(r.title, q)}</p>
-                ${r.summary ? `<p class="card-summary">${highlight(r.summary, q)}</p>` : ''}
-                ${r.media_link ? `<a class="media-link" href="${escapeHtml(r.media_link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">뉴스 바로가기<span class="media-name">(${escapeHtml(r.media_press)})</span> ↗</a>` : ''}
-              </div>`).join('')}
-          </div>
+          <div class="agency-group-body">${ordered.map(r => cardHtml(r, false)).join('')}</div>
         </div>`;
       });
       resultsEl.innerHTML = html;
@@ -317,6 +348,14 @@
     render();
   });
   ministrySelect.addEventListener('change', render);
+  function setView(mode) {
+    viewMode = mode;
+    $('view-agency').classList.toggle('active', mode === 'agency');
+    $('view-latest').classList.toggle('active', mode === 'latest');
+    render();
+  }
+  $('view-agency').addEventListener('click', () => setView('agency'));
+  $('view-latest').addEventListener('click', () => setView('latest'));
   clearFilterBtn.addEventListener('click', () => { searchInput.value=''; ministrySelect.value=''; activeWatchKeyword=null; render(); });
 
   resultsEl.addEventListener('click', e => {
