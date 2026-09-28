@@ -121,9 +121,34 @@ def _consume_common_prefix(text: str, prefix: str):
     return i, matched, total
 
 
+# 요약 줄 구분: "- " 처럼 하이픈 뒤에 공백이 오는 경우 (K-배터리, 한-아세안 같은 단어 내부 하이픈은 제외)
+_BULLET_SPLIT_RE = re.compile(r"\s*[-–—]\s+")
+# 문장/구절이 끝난 것으로 볼 수 있는 어미·부호 (미리보기가 중간에 잘렸는지 판단용)
+_TERMINAL_RE = re.compile(
+    r"(다|함|음|임|됨|등|예정|계획|개최|추진|발표|실시|마련|확대|강화|지원|운영|시행|선정|체결|출범|착수)\.?$"
+    r"|[)\]」』”’\"'.!?]$|\d\s*(건|명|개|곳|원|억|조|%|년|월|일)$"
+)
+_SUBTITLE_CHROME = ("이전다음기사", "정책 NOW", "오늘의 멀티미디어", "정책포커스", "하단 배너",
+                    "콘텐츠 영역", "사이트 이동경로", "사실은 이렇습니다", "공지사항", "실시간 인기뉴스")
+
+
+def summarize_lines(raw: str, max_lines: int = 3, maybe_truncated: bool = True) -> str:
+    """부제/미리보기 문장을 '- ' 기준으로 나눠 최대 max_lines줄의 요약(줄바꿈 구분)으로 만든다.
+    미리보기가 중간에 잘렸을 가능성이 있으면(maybe_truncated) 마지막의 미완성 줄은 버린다."""
+    parts = [p.lstrip("▷□○▲◇※·•ㆍ ").rstrip(" -–—").strip() for p in _BULLET_SPLIT_RE.split(raw.strip())]
+    parts = [p for p in parts if p]
+    if not parts:
+        return ""
+    if maybe_truncated and len(raw.strip()) >= 90 and not _TERMINAL_RE.search(parts[-1]):
+        if len(parts) >= 2:
+            parts = parts[:-1]
+        else:
+            parts[-1] = parts[-1].rstrip(" ,·") + "…"
+    return "\n".join(parts[:max_lines])[:300]
+
+
 def extract_summary(full: str, title: str) -> str:
-    """목록 링크 텍스트(제목 + 제목 반복 + 본문 미리보기)에서 본문 미리보기만 뽑는다.
-    제목이 앞에서 두 번 반복되므로 최대 2번 제목을 걷어내고, 남는 부분을 요약으로 쓴다.
+    """목록 링크 텍스트(제목 + 제목 반복 + 본문 미리보기)에서 본문 미리보기만 뽑아 요약 줄로 만든다.
     안내문구뿐이거나 너무 짧으면 빈 문자열을 반환한다."""
     rest = full.strip()
     for _ in range(2):
@@ -132,11 +157,52 @@ def extract_summary(full: str, title: str) -> str:
             rest = rest[i:].strip()
         else:
             break
-    rest = rest.lstrip(" -–—·:▷□○▲◇※").strip()
     rest = _BOILERPLATE_SUFFIX_RE.sub("", rest).strip()
-    if re.search(r"관련\s*보도자료\s*내용입니다", rest):
+    if re.search(r"관련\s*보도자료\s*내용입니다", rest) or len(rest) < 15:
         return ""
-    return rest[:300] if len(rest) >= 15 else ""
+    return summarize_lines(rest, maybe_truncated=True)
+
+
+def fetch_detail_subtitle(link: str) -> str:
+    """상세 페이지에서 제목(h1) 바로 아래 부제(h2)를 가져온다. 보도자료의 부제는
+    보통 핵심 내용을 요약한 문장들이라, 잘림 없는 요약으로 쓰기에 가장 좋다.
+    실패하거나 부제가 없으면 빈 문자열."""
+    try:
+        resp = requests.get(link, headers=HEADERS, timeout=15)
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        print(f"[경고] 상세 페이지(부제) 요청 실패: {e}", file=sys.stderr)
+        return ""
+    soup = BeautifulSoup(resp.text, "html.parser")
+    h1 = soup.find("h1")
+    h2 = h1.find_next("h2") if h1 else None
+    if not h2:
+        return ""
+    txt = h2.get_text("\n", strip=True)
+    if not txt or any(txt.startswith(c) for c in _SUBTITLE_CHROME):
+        return ""
+    return txt
+
+
+def _norm(t: str) -> str:
+    return re.sub(r"\s+", "", t)
+
+
+def enrich_with_summary(items):
+    """새로 발견된 항목마다 상세 페이지의 부제를 읽어 요약(최대 3줄)으로 만든다.
+    부제가 3줄 미만이면 목록 미리보기에서 뽑은 줄로 채운다. 실패하면 목록 미리보기 요약을 그대로 둔다."""
+    for it in items:
+        sub = fetch_detail_subtitle(it["link"])
+        if sub:
+            lines = summarize_lines(sub, maybe_truncated=False).split("\n")
+            for extra in (it.get("summary") or "").split("\n"):
+                if len(lines) >= 3:
+                    break
+                if extra and not any(_norm(extra) in _norm(l) or _norm(l) in _norm(extra) for l in lines):
+                    lines.append(extra)
+            it["summary"] = "\n".join(l for l in lines if l)[:300]
+        time.sleep(REQUEST_DELAY_SEC)
+    return items
 
 
 def today_str():
@@ -355,6 +421,8 @@ def main():
     print(f"[신규 발견] {len(new_items)}건 (감시 대상 {len(AGENCIES)}개 기관 기준)")
 
     if new_items:
+        print(f"[요약] 신규 {len(new_items)}건의 부제/미리보기로 요약 생성 중...")
+        new_items = enrich_with_summary(new_items)
         print(f"[매체 매칭] 신규 {len(new_items)}건의 연합뉴스/뉴시스/뉴스1 보도 여부 확인 중...")
         new_items = enrich_with_media(new_items)
 
