@@ -61,7 +61,7 @@
   .badge { font-size:12px; font-weight:600; color:var(--accent); background:var(--accent-bg); padding:3px 10px; border-radius:999px; }
   .card-date { font-size:12px; color:var(--text-secondary); }
   .card-title { font-size:16px; font-weight:600; margin:0 0 6px; }
-  .card-summary { font-size:14px; color:var(--text-secondary); margin:0; }
+  .card-summary { font-size:14px; color:var(--text-secondary); margin:0; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
   mark { background:var(--highlight-bg); border-radius:2px; }
   .empty-state, .error-state { text-align:center; padding:48px 20px; color:var(--text-secondary); font-size:14px; }
   .error-state { border:1px dashed var(--danger); border-radius:var(--radius); color:var(--danger); background:#fff5f5; }
@@ -69,7 +69,7 @@
     border:1px dashed var(--border); border-radius:var(--radius); margin-bottom:6px; font-size:13px; color:var(--text-secondary); }
   footer { max-width:720px; margin:24px auto 0; padding:0 16px; font-size:12px; color:var(--text-secondary); text-align:center; line-height:1.7; }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
 </head>
 <body>
 
@@ -340,39 +340,94 @@
     render();
   });
 
-  $('export-excel-btn').addEventListener('click', () => {
+  $('export-excel-btn').addEventListener('click', async () => {
     const selected = lastFiltered.filter(r => selectedLinks.has(r.link));
     if (!selected.length) { alert('선택된 항목이 없습니다. 내보낼 기사를 체크해 주세요.'); return; }
 
-    // 화면과 동일하게 부처(AGENCIES 순서)별로 묶고, 그룹 안에서는 오래된 기사부터 정렬
-    const ordered = [];
+    // 화면과 동일하게 부처(AGENCIES 순서)별로 묶고, 그룹 안에서는 오래된 기사부터
+    const groups = [];
     AGENCIES.forEach(agency => {
-      selected.filter(r => r.agency === agency).slice().reverse().forEach(r => ordered.push(r));
+      const list = selected.filter(r => r.agency === agency).slice().reverse();
+      if (list.length) groups.push({ agency, list });
     });
 
-    const header = ['부처명', '제목', '매체명'];
-    const rows = [header];
-    ordered.forEach(r => {
-      const hasMedia = !!(r.media_link && r.media_title);
-      rows.push([r.agency, hasMedia ? r.media_title : r.title, hasMedia ? r.media_press : '']);
+    const dateLabel = $('date-label').textContent || '';
+    const [y, m, d] = dateLabel.split('-').map(Number);
+    const dt = (y && m && d) ? new Date(y, m - 1, d) : new Date();
+    const wd = ['일','월','화','수','목','금','토'][dt.getDay()];
+    const dateText = `${dt.getFullYear()}. ${dt.getMonth() + 1}. ${dt.getDate()}. (${wd})`;
+
+    const wb = new ExcelJS.Workbook();
+    const ws = wb.addWorksheet('오늘의 이슈');
+    ws.columns = [{ width: 18 }, { width: 80 }, { width: 14 }];
+
+    const thin = { style: 'thin', color: { argb: 'FF7F7F7F' } };
+    const border = { top: thin, left: thin, bottom: thin, right: thin };
+
+    // 1행: 제목
+    ws.mergeCells('A1:C1');
+    ws.getCell('A1').value = '중앙부처 오늘의 이슈';
+    ws.getCell('A1').font = { name: '맑은 고딕', size: 22, bold: true };
+    ws.getCell('A1').alignment = { horizontal: 'center', vertical: 'middle' };
+    ws.getRow(1).height = 44;
+
+    // 2행: 날짜 (오른쪽 정렬)
+    ws.mergeCells('A2:C2');
+    ws.getCell('A2').value = dateText;
+    ws.getCell('A2').font = { name: '맑은 고딕', size: 10 };
+    ws.getCell('A2').alignment = { horizontal: 'right', vertical: 'middle' };
+
+    // 3행: 헤더 (회색 배경)
+    ['부처명', '제목', '매체명'].forEach((h, i) => {
+      const c = ws.getCell(3, i + 1);
+      c.value = h;
+      c.font = { name: '맑은 고딕', size: 11, bold: true };
+      c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFBFBFBF' } };
+      c.alignment = { horizontal: 'center', vertical: 'middle' };
+      c.border = border;
+    });
+    ws.getRow(3).height = 24;
+
+    // 데이터 행: 부처명은 같은 부처끼리 세로 병합
+    let row = 4;
+    groups.forEach(g => {
+      const startRow = row;
+      g.list.forEach(r => {
+        const hasMedia = !!(r.media_link && r.media_title);
+        const titleCell = ws.getCell(row, 2);
+        titleCell.value = { text: hasMedia ? r.media_title : r.title, hyperlink: hasMedia ? r.media_link : r.link };
+        titleCell.font = { name: '맑은 고딕', size: 10, color: { argb: 'FF0563C1' }, underline: true };
+        titleCell.alignment = { vertical: 'middle', wrapText: true };
+        titleCell.border = border;
+
+        const mediaCell = ws.getCell(row, 3);
+        mediaCell.value = hasMedia ? r.media_press : '';
+        mediaCell.font = { name: '맑은 고딕', size: 10 };
+        mediaCell.alignment = { horizontal: 'center', vertical: 'middle' };
+        mediaCell.border = border;
+
+        ws.getCell(row, 1).border = border;
+        ws.getRow(row).height = 34;
+        row++;
+      });
+      if (row - 1 > startRow) ws.mergeCells(startRow, 1, row - 1, 1);
+      const a = ws.getCell(startRow, 1);
+      a.value = g.agency;
+      a.font = { name: '맑은 고딕', size: 11, bold: true };
+      a.alignment = { horizontal: 'center', vertical: 'middle', wrapText: true };
+      a.border = border;
     });
 
-    const ws = XLSX.utils.aoa_to_sheet(rows);
-    ws['!cols'] = [{ wch: 14 }, { wch: 60 }, { wch: 12 }];
-
-    // 제목 열(B열)에 실제 기사(있으면 매체 기사, 없으면 원문 보도자료) 하이퍼링크 연결
-    ordered.forEach((r, i) => {
-      const rowIdx = i + 1; // 0행은 헤더
-      const hasMedia = !!(r.media_link && r.media_title);
-      const url = hasMedia ? r.media_link : r.link;
-      const cellRef = XLSX.utils.encode_cell({ r: rowIdx, c: 1 });
-      if (ws[cellRef]) ws[cellRef].l = { Target: url, Tooltip: ws[cellRef].v };
-    });
-
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, '보도자료');
-    const dateLabel = $('date-label').textContent || 'export';
-    XLSX.writeFile(wb, `보도자료_${dateLabel}.xlsx`);
+    const buf = await wb.xlsx.writeBuffer();
+    const blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `중앙부처_오늘의이슈_${dateLabel || 'export'}.xlsx`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
   });
 
   function shiftDate(str, days) {
