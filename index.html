@@ -44,8 +44,19 @@
   #result-count { font-size:13px; color:var(--text-secondary); margin:4px 4px 12px; display:flex; justify-content:space-between; }
   #clear-filter-btn { font-size:12px; color:var(--accent); background:none; border:none; cursor:pointer; text-decoration:underline; display:none; }
   .card { background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px;
-    margin-bottom:12px; text-decoration:none; color:inherit; display:block; }
+    margin-bottom:12px; text-decoration:none; color:inherit; display:block; cursor:pointer; }
   .card:hover { box-shadow:0 2px 8px rgba(0,0,0,0.06); border-color:var(--accent); }
+  .select-checkbox { width:16px; height:16px; cursor:pointer; flex-shrink:0; }
+  .agency-group { margin-bottom:22px; background:#eef1f6; border:1.5px solid #c9d1dd; border-radius:14px; padding:14px; }
+  .agency-group-header { display:flex; align-items:center; gap:8px; margin-bottom:12px; padding:0 2px; }
+  .agency-group .badge { font-size:14px; padding:5px 14px; }
+  .agency-group .card { margin-bottom:0; }
+  .agency-group-count { font-size:12.5px; color:var(--text-secondary); }
+  .agency-group-body { display:flex; flex-direction:column; gap:10px; }
+  .media-link { display:inline-block; margin-top:10px; font-size:12.5px; font-weight:600; color:#fff; background:var(--accent);
+    padding:6px 12px; border-radius:8px; text-decoration:none; }
+  .media-link:hover { background:#1d4ed8; }
+  .media-name { font-weight:400; opacity:.85; margin-left:4px; }
   .card-top { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
   .badge { font-size:12px; font-weight:600; color:var(--accent); background:var(--accent-bg); padding:3px 10px; border-radius:999px; }
   .card-date { font-size:12px; color:var(--text-secondary); }
@@ -98,6 +109,9 @@
   <div id="result-count">
     <span id="result-count-text"></span>
     <span style="display:flex; gap:10px; align-items:center;">
+      <label style="display:flex; align-items:center; gap:4px; font-size:12px; cursor:pointer;">
+        <input type="checkbox" id="select-all-checkbox"> 전체선택
+      </label>
       <button id="export-excel-btn" class="ghost-btn" style="font-size:12px; padding:5px 10px;">엑셀로 내보내기</button>
       <button id="clear-filter-btn">필터 초기화</button>
     </span>
@@ -134,15 +148,17 @@
   let currentItems = [];
   let availableDates = [];
   let lastFiltered = [];
+  let selectedLinks = new Set();
 
   function loadWatch() {
     try { const r = localStorage.getItem(STORAGE_KEY); if (r) return JSON.parse(r); } catch (e) {}
     return DEFAULT_KEYWORDS.slice();
   }
   function saveWatch() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(watchKeywords)); } catch (e) {} }
+  function decodeEntities(s) { const t = document.createElement('textarea'); t.innerHTML = s || ''; return t.value; }
   function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   function highlight(text, q) {
-    const e = escapeHtml(text);
+    const e = escapeHtml(decodeEntities(text));
     if (!q) return e;
     return e.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')','gi'), '<mark>$1</mark>');
   }
@@ -173,7 +189,10 @@
         const items = await fetchJson(`data/${dateStr}.json`);
         payload = { date: dateStr, collected_at: null, items };
       }
-      currentItems = payload.items || [];
+      currentItems = (payload.items || []).map(r => ({
+        ...r, title: decodeEntities(r.title), summary: decodeEntities(r.summary), media_title: decodeEntities(r.media_title)
+      }));
+      selectedLinks = new Set(currentItems.map(r => r.link));
       $('collected-at').textContent = payload.collected_at
         ? new Date(payload.collected_at).toLocaleString('ko-KR') : '-';
       $('date-label').textContent = dateStr;
@@ -238,12 +257,38 @@
     resultCountTextEl.textContent = (q||mf) ? `${filtered.length}건 검색됨` : `전체 ${filtered.length}건`;
     clearFilterBtn.style.display = (q||mf) ? 'inline' : 'none';
 
-    resultsEl.innerHTML = filtered.length ? filtered.map(r => `
-      <a class="card" href="${escapeHtml(r.link)}" target="_blank" rel="noopener">
-        <div class="card-top"><span class="badge">${escapeHtml(r.agency)}</span><span class="card-date">${escapeHtml(r.date)}</span></div>
-        <p class="card-title">${highlight(r.title, q)}</p>
-        ${r.summary ? `<p class="card-summary">${highlight(r.summary, q)}</p>` : ''}
-      </a>`).join('') : '<div class="empty-state">검색 결과가 없습니다.</div>';
+    // 부처(AGENCIES 순서) 별로 묶고, 각 그룹 안에서는 먼저 올라온 기사부터
+    // (=배열 뒤쪽이 더 오래된 것이므로 reverse) 순서대로 정렬한다.
+    if (!filtered.length) {
+      resultsEl.innerHTML = '<div class="empty-state">검색 결과가 없습니다.</div>';
+    } else {
+      const groupOrder = mf ? [mf] : AGENCIES;
+      let html = '';
+      groupOrder.forEach(agency => {
+        const group = filtered.filter(r => r.agency === agency);
+        if (!group.length) return;
+        const ordered = group.slice().reverse(); // 오래된 기사부터
+        html += `<div class="agency-group">
+          <div class="agency-group-header">
+            <span class="badge">${escapeHtml(agency)}</span>
+            <span class="agency-group-count">${ordered.length}건</span>
+          </div>
+          <div class="agency-group-body">
+            ${ordered.map(r => `
+              <div class="card" data-link="${escapeHtml(r.link)}">
+                <div class="card-top">
+                  <input type="checkbox" class="select-checkbox" data-key="${escapeHtml(r.link)}" ${selectedLinks.has(r.link) ? 'checked' : ''}>
+                  <span class="card-date">${escapeHtml(r.date)}</span>
+                </div>
+                <p class="card-title">${highlight(r.title, q)}</p>
+                ${r.summary ? `<p class="card-summary">${highlight(r.summary, q)}</p>` : ''}
+                ${r.media_link ? `<a class="media-link" href="${escapeHtml(r.media_link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">뉴스 바로가기<span class="media-name">(${escapeHtml(r.media_press)})</span> ↗</a>` : ''}
+              </div>`).join('')}
+          </div>
+        </div>`;
+      });
+      resultsEl.innerHTML = html;
+    }
 
     const have = new Set(currentItems.map(r => r.agency));
     const zero = AGENCIES.filter(a => !have.has(a) && (!mf || mf === a));
@@ -256,6 +301,15 @@
       </details>`;
 
     renderWatchTags();
+
+    const selectAllCb = $('select-all-checkbox');
+    if (filtered.length === 0) {
+      selectAllCb.checked = false; selectAllCb.indeterminate = false;
+    } else {
+      const selectedCount = filtered.filter(r => selectedLinks.has(r.link)).length;
+      selectAllCb.checked = selectedCount === filtered.length;
+      selectAllCb.indeterminate = selectedCount > 0 && selectedCount < filtered.length;
+    }
   }
 
   searchInput.addEventListener('input', () => {
@@ -265,17 +319,56 @@
   ministrySelect.addEventListener('change', render);
   clearFilterBtn.addEventListener('click', () => { searchInput.value=''; ministrySelect.value=''; activeWatchKeyword=null; render(); });
 
+  resultsEl.addEventListener('click', e => {
+    if (e.target.classList.contains('select-checkbox')) {
+      const key = e.target.dataset.key;
+      if (e.target.checked) selectedLinks.add(key); else selectedLinks.delete(key);
+      const filtered = lastFiltered;
+      const selectAllCb = $('select-all-checkbox');
+      const selectedCount = filtered.filter(r => selectedLinks.has(r.link)).length;
+      selectAllCb.checked = selectedCount === filtered.length && filtered.length > 0;
+      selectAllCb.indeterminate = selectedCount > 0 && selectedCount < filtered.length;
+      return;
+    }
+    const card = e.target.closest('.card');
+    if (card && card.dataset.link) window.open(card.dataset.link, '_blank', 'noopener');
+  });
+
+  $('select-all-checkbox').addEventListener('change', e => {
+    if (e.target.checked) lastFiltered.forEach(r => selectedLinks.add(r.link));
+    else lastFiltered.forEach(r => selectedLinks.delete(r.link));
+    render();
+  });
+
   $('export-excel-btn').addEventListener('click', () => {
-    if (!lastFiltered.length) { alert('내보낼 데이터가 없습니다.'); return; }
-    const rows = lastFiltered.map(r => ({
-      '날짜': r.date,
-      '기관': r.agency,
-      '제목': r.title,
-      '요약': r.summary || '',
-      '링크': r.link,
-    }));
-    const ws = XLSX.utils.json_to_sheet(rows);
-    ws['!cols'] = [{ wch: 12 }, { wch: 14 }, { wch: 50 }, { wch: 60 }, { wch: 45 }];
+    const selected = lastFiltered.filter(r => selectedLinks.has(r.link));
+    if (!selected.length) { alert('선택된 항목이 없습니다. 내보낼 기사를 체크해 주세요.'); return; }
+
+    // 화면과 동일하게 부처(AGENCIES 순서)별로 묶고, 그룹 안에서는 오래된 기사부터 정렬
+    const ordered = [];
+    AGENCIES.forEach(agency => {
+      selected.filter(r => r.agency === agency).slice().reverse().forEach(r => ordered.push(r));
+    });
+
+    const header = ['부처명', '제목', '매체명'];
+    const rows = [header];
+    ordered.forEach(r => {
+      const hasMedia = !!(r.media_link && r.media_title);
+      rows.push([r.agency, hasMedia ? r.media_title : r.title, hasMedia ? r.media_press : '']);
+    });
+
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    ws['!cols'] = [{ wch: 14 }, { wch: 60 }, { wch: 12 }];
+
+    // 제목 열(B열)에 실제 기사(있으면 매체 기사, 없으면 원문 보도자료) 하이퍼링크 연결
+    ordered.forEach((r, i) => {
+      const rowIdx = i + 1; // 0행은 헤더
+      const hasMedia = !!(r.media_link && r.media_title);
+      const url = hasMedia ? r.media_link : r.link;
+      const cellRef = XLSX.utils.encode_cell({ r: rowIdx, c: 1 });
+      if (ws[cellRef]) ws[cellRef].l = { Target: url, Tooltip: ws[cellRef].v };
+    });
+
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, '보도자료');
     const dateLabel = $('date-label').textContent || 'export';
