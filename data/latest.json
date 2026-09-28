@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "collected_at": "2026-09-28T10:59:47.364775+09:00",
+  "collected_at": "2026-09-28T11:09:10.517216+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,72 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-09-28",
+      "agency": "국토교통부",
+      "title": "인공지능(AI) 도시·스마트 도시 석·박사 인재 키울 대학 4곳 선정",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783289",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "Ai·스마트도시 융합 인재 육성사업 공모…4개 대학 선정 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260928020100003"
+    },
+    {
+      "date": "2026-09-28",
+      "agency": "국토교통부",
+      "title": "모두의카드 출퇴근 시차시간 혜택 계속 이어간다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783288",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "이달부터 반년간 '반값' 모두의카드…출퇴근시간 환급률 30%p↑ | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260416171900003"
+    },
+    {
+      "date": "2026-09-28",
+      "agency": "해양수산부",
+      "title": "해양수산부, 항만 재난 상황 대비 초동 대응 교육 및 토론 훈련 실시",
+      "summary": "지방해양수산청·항만공사 담당자 대상으로 항만 재난 조치 요령 등 교육·토론   해양수산부(장관 황종우)는 9월 29일(화) 본관 대회의실에서 각 지방해양수산청과 항만공사 담당자를 대상으로 항만시설의 대형 화재·폭발 등 항만 재난 상황에 대비한 교육 및 토론 훈련을 실시한다고 밝혔다.  항만은 선박과 화물, 하역 시설, 여객터미널 등이 밀집되어 있고, 위험물 하역 작업도 상시로 이루어져 화재·폭발 등 대형 사고의 위험이 늘 존재한다. 또한 대형 사고가 발생하면 인명·재산 피해는 물론 항만 운영 중단과 물류 차질로도 이어질 수 있어 피",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783287",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-09-28",
+      "agency": "해양수산부",
+      "title": "해양수산부, '포괄적·점진적 환태평양경제동반자협정(CPTPP)' 논의 관련 어업인 의견 수렴의 장 마련",
+      "summary": "현장 어업인 목소리, 가입 검토 과정에서부터 충실히 반영   해양수산부(장관 황종우)는 9월 29일(화) 정부가 추진 중인 '포괄적·점진적 환태평양경제동반자협정(Comprehensive & Progressive Trans Pacific Partnership, CPTPP)' 가입 검토와 관련하여 어업인 간담회를 해양수산부 대회의실에서 개최한다고 밝혔다. 아울러, 'CPTPP' 가입 시 상황별 수산 분야 피해 영향과 어업 현장의 우려 사항을 경청하고, 보완 대책 등을 논의할 예정이다.  정부는 8월 27일(목)에 열린 '제273차 대외",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783286",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-09-28",
+      "agency": "농림축산식품부",
+      "title": "사람과 동물의 행복한 일상... '제19회 동물사랑 사진·영상 공모전' 수상작 선정",
+      "summary": "농림축산식품부(장관 송미령, 이하 '농식품부')는 성숙한 반려동물 문화 정착과 동물복지에 대한 사회적 공감대 확산을 위해 추진한 '제19회 동물사랑 사진·영상 공모전'의 최종 수상작 16점을 선정했다고 밝혔다.   이번 공모전은 '사람과 동물이 더불어 행복한 사회'를 주제로 지난 6월 22일부터 7월 31일까지 접수를 진행했으며, 사진·영상 분야에 총 1,844점(사진 1,659점, 영상 185점)이 출품되었다. 수상작은 전문가 심사와 온라인 국민투표를 거쳐 대상, 최우수상, 우수상, 장려상 총 16점을 최종 선정했으며, 수상자에게",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783285",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-09-28",
+      "agency": "농림축산식품부",
+      "title": "럼피스킨 정밀진단, 이제 전국에서 신속하게",
+      "summary": "농림축산검역본부(본부장 최정록, 이하 '검역본부')는 11개 시도 동물위생시험소를 대상으로 럼피스킨 정밀진단 교육과 평가를 실시하고 검사 권한을 이관하여 총 13개 시도 동물위생시험소*에서 럼피스킨 정밀진단이 가능해졌다고 밝혔다.  * (기존) 경기, 충남 (추가) 인천, 대구, 울산, 경기북부, 강원, 충북, 전북, 전남, 경북, 경남, 제주   럼피스킨은 소에서 발생하는 가축전염병으로, 침파리·모기 등 흡혈곤충을 통해 전파되며 감염 시 고열, 전신 피부결절, 식욕부진 등의 증상을 나타낸다. 국내에서는 2023년 10월에 처음으로",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783284",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-09-28",
       "agency": "고용노동부",
