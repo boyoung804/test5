@@ -100,6 +100,45 @@ def clean_title(raw: str) -> str:
     return core.strip()
 
 
+def _consume_common_prefix(text: str, prefix: str):
+    """공백을 무시하고 text가 prefix로 시작하는 만큼 소비한다.
+    (소비한 text 위치, 일치한 글자 수, prefix의 공백 제외 글자 수)를 반환."""
+    i = j = matched = 0
+    n, m = len(text), len(prefix)
+    while i < n and j < m:
+        if text[i].isspace():
+            i += 1
+            continue
+        if prefix[j].isspace():
+            j += 1
+            continue
+        if text[i] != prefix[j]:
+            break
+        i += 1
+        j += 1
+        matched += 1
+    total = sum(1 for c in prefix if not c.isspace())
+    return i, matched, total
+
+
+def extract_summary(full: str, title: str) -> str:
+    """목록 링크 텍스트(제목 + 제목 반복 + 본문 미리보기)에서 본문 미리보기만 뽑는다.
+    제목이 앞에서 두 번 반복되므로 최대 2번 제목을 걷어내고, 남는 부분을 요약으로 쓴다.
+    안내문구뿐이거나 너무 짧으면 빈 문자열을 반환한다."""
+    rest = full.strip()
+    for _ in range(2):
+        i, matched, total = _consume_common_prefix(rest, title)
+        if total and matched >= max(6, int(total * 0.6)):
+            rest = rest[i:].strip()
+        else:
+            break
+    rest = rest.lstrip(" -–—·:▷□○▲◇※").strip()
+    rest = _BOILERPLATE_SUFFIX_RE.sub("", rest).strip()
+    if re.search(r"관련\s*보도자료\s*내용입니다", rest):
+        return ""
+    return rest[:300] if len(rest) >= 15 else ""
+
+
 def today_str():
     return datetime.now(KST).strftime("%Y-%m-%d")
 
@@ -225,12 +264,13 @@ def parse_items(html: str):
             title = text.split(date_raw)[0].strip()
             title = clean_title(title) if title else text[:200]
         title = title[:200]
+        summary = extract_summary(text.split(date_raw)[0], title)
 
         items.append({
             "date": date_iso,
             "agency": agency,
             "title": title or "(제목 확인 필요)",
-            "summary": "",  # 상세 페이지를 별도로 열어야 본문 요약이 가능 (부하 고려해 기본은 비움)
+            "summary": summary,  # 목록의 본문 미리보기에서 추출 (없으면 빈 문자열)
             "link": f"{DETAIL_URL}?newsId={news_id}",
             "unverified": False,
             "media_press": "",   # 연합뉴스/뉴시스/뉴스1 중 매칭된 매체명 (없으면 빈 문자열)
