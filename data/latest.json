@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "collected_at": "2026-09-29T13:47:18.020484+09:00",
+  "collected_at": "2026-09-29T13:59:53.140481+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-09-29",
+      "agency": "국토교통부",
+      "title": "[참고] 서소문고가 철거공사 붕괴사고, 건설사고조사위원회 조사기간 연장",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783478",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "서소문고가 붕괴사고 조사위원회 구성…원인 규명 착수 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260528118100003"
+    },
     {
       "date": "2026-09-29",
       "agency": "국방부",
