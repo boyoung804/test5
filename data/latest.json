@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "collected_at": "2026-09-29T09:47:08.357000+09:00",
+  "collected_at": "2026-09-29T10:02:16.309836+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-09-29",
+      "agency": "국가보훈부",
+      "title": "김구 탄생 150주년 뮤지컬 공연， 10월 1일 국회서 개최",
+      "summary": "260929 보도자료(김구 탄생 150주년 뮤지컬 공연， 10월 1일 국회서 개최)",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783411",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "[게시판] 내달 1일 '백범, 그리고 무대 위 광복군' 뮤지컬 공연 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260929035700504"
+    },
     {
       "date": "2026-09-29",
       "agency": "인사혁신처",
