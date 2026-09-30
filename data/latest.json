@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "collected_at": "2026-10-01T07:53:20.971128+09:00",
+  "collected_at": "2026-10-01T08:06:58.250942+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,39 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-01",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 글로벌 규제조화센터, 최신 ICH 가이드라인 교육으로 현장 적용 역랑 높인다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783858",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "식약처, 국제사회에 규제조화 성과 알렸다 - 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20250805042000017"
+    },
+    {
+      "date": "2026-10-01",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] '25년 화장품 안전성 정보 보고 사례 발표",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783857",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "[바이오스냅] 식약처, 화장품 안전성 평가 가이드라인 발간 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260610063100017"
+    },
+    {
+      "date": "2026-10-01",
+      "agency": "식품의약품안전처",
+      "title": "전국 어린이 6만여 명, 식생활 안전 정책에 직접 목소리 낸다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783856",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-01",
       "agency": "기후에너지환경부",
