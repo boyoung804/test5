@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "collected_at": "2026-10-01T15:44:23.663033+09:00",
+  "collected_at": "2026-10-01T16:02:07.492141+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,28 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-01",
+      "agency": "국무조정실",
+      "title": "[보도자료] 제3차 위기채무자 지원을 위한 관계기관 회의 개최 결과",
+      "summary": "위기 채무자 지원 위해 대한법률구조공단과 신용회복위원회 간 연계 강화 논의\n총리실, 개인회생·파산신청 지원 강화 및 개선방안 마련\n대한법률구조공단-신용회복위원회 간 「연계업무 처리매뉴얼」 수립 논의",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783996",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "법무부·법률구조공단, 주민센터서 '위기 채무자' 법률지원 강화 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260804069700004"
+    },
+    {
+      "date": "2026-10-01",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 정부-제약-의료·약업계  필수의약품 공급 안정화 추진",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783993",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "필수의약품 공급망 강화…민관 협력 네트워크 출범 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20250926063400017"
+    },
     {
       "date": "2026-10-01",
       "agency": "고용노동부",
