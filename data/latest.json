@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "collected_at": "2026-10-02T14:49:03.814545+09:00",
+  "collected_at": "2026-10-02T15:01:19.747546+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-02",
+      "agency": "보건복지부",
+      "title": "삶의 마지막까지 익숙한 곳에서 보낼 수 있도록 재가 생애말기 의료·요양·돌봄 지원방안 모색",
+      "summary": "복지부, 재가 생애말기 지원 체계 토론회 개최해 현장 의견 수렴\n내년 장기요양보험 수급 대상자부터 재택임종 지원 시범사업 실시",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784179",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "\"병원 대신 내집에서 마지막까지\"…은평구 '생애말기 돌봄' 지원",
+      "media_link": "https://www.yna.co.kr/view/AKR20260623132700004"
+    },
     {
       "date": "2026-10-02",
       "agency": "과학기술정보통신부",
