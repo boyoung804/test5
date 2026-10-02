@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "collected_at": "2026-10-02T11:21:26.505210+09:00",
+  "collected_at": "2026-10-02T11:37:35.950078+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-02",
+      "agency": "보건복지부",
+      "title": "공적입양체계 전환 후 결연 실적 9월 기준 122명, 제3차 입양정책위원회 개최",
+      "summary": "공적입양체계 안착 및 입양인 권리보장 방안 논의\n입양인 뿌리 찾기 지원 위해 기록물 영구보존·정보공개서비스 강화",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784137",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "공적 입양 절차 개선하니 결연 아동 '16명→122명'…7.6배로 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20261001177500530"
+    },
     {
       "date": "2026-10-02",
       "agency": "산업통상부",
