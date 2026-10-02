@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "collected_at": "2026-10-02T14:14:24.034805+09:00",
+  "collected_at": "2026-10-02T14:32:12.738861+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,39 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-02",
+      "agency": "국무조정실",
+      "title": "[보도자료] 제2회 국토대전환 미래전략 포럼 개최",
+      "summary": "지역성장을 위한 인재양성 방안 논의\n제2회 「국토대전환 미래전략 포럼」  개최\n지역대학·산업을 연계한 인재양성 및 지역정착 방안 모색□ 국무조정실은 국회 더불어민주당 메가프로젝트 및 지방성장지원 특별위원회, 한국교육개발원, 한국과학기술기획평가원과 공동으로 10월 2일(금) 10시 국회의원회관 제2소회의실에서 ｢제2회 국토대전환 미래전략 포럼｣을 개최했다.[제2회 「국토대전환 미래전략」 포럼 개요]·(일시·장소) '26.10.2.(금) 10:00-12:00, 국회의원회관 제2소회의실·(주제) 5극3특 성장엔진을 이끄는 지역인재 양성 ",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784170",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "국조실장 \"국토대전환 이번엔 진짜…안하면 대한민국 장래없다\" | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260902068500001"
+    },
+    {
+      "date": "2026-10-02",
+      "agency": "고용노동부",
+      "title": "인공지능(AI)·디지털 기반 직업훈련 지원 한국기술교육대 STEP, 학습관리시스템(LMS) 신규 참여기관 모집",
+      "summary": "10월 23일까지 신청 접수, 2일(금) 설명회 개최 한국기술교육대학교(KOREATECH·총장 유길상) 온라인평생교육원(원장 한연희)은 고용노동부와 함께 훈련기관, 기업, 공공기관, 직업계고 등 다양한 기관이 온라인 직업교육훈련을 효과적으로 운영할 수 있도록 STEP* 학습관리시스템(LMS) 신규 참여기관을 10월 2일부터 23일까지 모집한다. *STEP이란 Smart Training Education Platform의 약자로, 전 국민 대상 온라인 공공 교육훈련 플랫폼  STEP LMS는 ▲AI 기초 역량 강화 및 AI+X 등 1",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784168",
+      "unverified": false,
+      "media_press": "연합뉴스",
+      "media_title": "전 국민 Ai 역량 강화 교육과정 제공…총 24개 과정 무료 지원 | 연합뉴스",
+      "media_link": "https://www.yna.co.kr/view/AKR20260724151900530"
+    },
+    {
+      "date": "2026-10-02",
+      "agency": "과학기술정보통신부",
+      "title": "구혁채 과기정통부 제1차관, 2030 청년자문단과 '청년이 그리는 과학기술계 미래' 논의",
+      "summary": "제3기 2030 청년자문단과 간담회 개최, 현장의 생생한 목소리 청취\n2030 청년자문단 정책 발굴 및 제안 활동 내용 환류(피드백)",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784169",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-02",
       "agency": "기후에너지환경부",
