@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "collected_at": "2026-10-06T08:53:37.118376+09:00",
+  "collected_at": "2026-10-06T09:12:04.222239+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-06",
+      "agency": "과학기술정보통신부",
+      "title": "과기정통부, 금융권의 연이은 해킹사고에 사이버위협 대응체계 강화",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784310",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-06",
       "agency": "산업통상부",
