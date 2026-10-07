@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "collected_at": "2026-10-07T09:48:34.113609+09:00",
+  "collected_at": "2026-10-07T10:06:31.218338+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,28 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-07",
+      "agency": "국가보훈부",
+      "title": "2026년 제대군인 고용우수기업 48곳 선정， 7일 첫 서울서 인증 현판식",
+      "summary": "261007 보도자료(2026년 제대군인 고용우수기업 48곳 선정， 7일 첫 서울서 인증 현판식)최종",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784469",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-07",
+      "agency": "국무조정실",
+      "title": "[보도자료] 사회대개혁위원회, '쉬운 공공언어 사용 확산 방안' 제안",
+      "summary": "사회대개혁위원회, '국민의 알 권리 위해 공공언어부터 쉽게'\n한글날 맞아 「쉬운 공공언어 사용 확산 방안」 정부에 제안… 국민의 정책 이해와 알 권리 높인다\n공직자 교육 강화·국무회의부터 쉬운 용어 사용·국제기구 우리말 약칭 마련 등 개선방안 제시",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784470",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-07",
       "agency": "고용노동부",
