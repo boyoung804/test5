@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "collected_at": "2026-10-08T21:27:48.564886+09:00",
+  "collected_at": "2026-10-08T21:54:50.887142+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-08",
+      "agency": "외교부",
+      "title": "외교부 공관장 인사",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784734",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-08",
       "agency": "외교부",
