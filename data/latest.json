@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "collected_at": "2026-10-08T17:51:44.293808+09:00",
+  "collected_at": "2026-10-08T18:06:44.171797+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,28 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-08",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 메틸수은 기준 초과 검출된 '기타 수산물가공품' 회수 조치",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784726",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-08",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 잔류농약 기준 초과 검출된 수입 '캐모마일' 회수 조치",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784725",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-08",
       "agency": "외교부",
