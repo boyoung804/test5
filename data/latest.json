@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "collected_at": "2026-10-12T15:26:13.072434+09:00",
+  "collected_at": "2026-10-12T15:58:20.436746+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-12",
+      "agency": "통일부",
+      "title": "고위공무원 인사발령(2026.10.12.자)",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156784877",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-12",
       "agency": "외교부",
