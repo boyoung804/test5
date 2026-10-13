@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "collected_at": "2026-10-14T08:03:45.390977+09:00",
+  "collected_at": "2026-10-14T08:30:58.150204+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,39 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-14",
+      "agency": "재정경제부",
+      "title": "비상경제본부 회의, 경제관계장관회의 겸 서비스산업발전 TF 개최",
+      "summary": "이형일 부총리 겸 재정경제부장관은 10.14일(수) 07:40 정부서울청사에서 비상경제본부 회의, 경제관계장관회의 겸 서비스산업발전 TF를 주재하였습니다.   ※ 자세한 내용은 별도 첨부자료를 참고하여 주시기 바랍니다. 문의. 재정경제부 정책조정관 정책조정총괄과 임강빈 (044-215-4513)",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785051",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "문화체육관광부",
+      "title": "2034년 준공 목표 스포츠·공연 복합형 돔구장 건립 후보지 공모 실시",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785050",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "식품의약품안전처",
+      "title": "가을 신학기 학교 급식시설·학교 주변 식품 취급업체 점검 결과…14곳 적발",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785049",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-14",
       "agency": "재정경제부",
