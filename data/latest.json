@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "collected_at": "2026-10-14T09:32:04.879311+09:00",
+  "collected_at": "2026-10-14T10:13:19.880045+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,28 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-14",
+      "agency": "과학기술정보통신부",
+      "title": "류제명 제2차관, 「피지컬 AI Tech Day」 참석",
+      "summary": "'행동하는 두뇌, Intelligence into Action' 주제로 글로벌 기술 동향과 발전 방향 공유\n\"우수한 기술이 현장 실증·사업화로 이어지도록 적극 지원\"",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785068",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "국가보훈부",
+      "title": "권오을 장관， '제대군인 예우 등 협조' 경제 5단체 릴레이 방문",
+      "summary": "261014 보도자료(권오을 장관， '제대군인 예우 등 협조' 경제 5단체 릴레이 방문)최종",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785067",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-14",
       "agency": "중소벤처기업부",
