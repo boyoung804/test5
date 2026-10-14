@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "collected_at": "2026-10-14T16:12:48.115651+09:00",
+  "collected_at": "2026-10-14T16:51:47.001902+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,61 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-14",
+      "agency": "국무조정실",
+      "title": "[보도자료] 생명지킴추진본부, 부산지역 천명지킴 현장소통 간담회 개최",
+      "summary": "범정부 생명지킴추진본부, 부산 민관생명지킴 현장 방문",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785176",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "문화체육관광부",
+      "title": "웹툰 산업계와 2027년 정부 예산안 논의",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785177",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "농림축산식품부",
+      "title": "농식품부 장관, 가을철 사과 수확 현장 점검",
+      "summary": "송미령 농림축산식품부(이하 '농식품부') 장관은 10월 14일(수), 가을철 본격적인 수확기를 맞아 경남 함양군의 사과 재배 농가를 방문하여, 홍로·후지 등 주요 사과 품종의 작황 점검과 함께 농업인들의 애로사항을 청취하였다.   이날 현장 방문은 올한해 안정적 사과 생산을 위해 애쓰신 농가의 노고를 격려하고, 가을철 사과 수급 상황 및 품질을 직접 확인하기 위해 마련되었다.  송미령 장관은 사과 수확 작업을 거들면서, \"올해 봄철 이상저온과 여름철 고온·가뭄 등 어려운 여건 속에서도 농가 여러분의 정성 어린 노력 덕분에 고품질의 ",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785170",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "국무조정실",
+      "title": "[보도자료] 제21차 부동산 불법행위 대응협의회",
+      "summary": "부동산감독추진단, 제21차 부동산 불법행위 대응협의회 개최\n부처별 부동산 불법행위 대응 추진현황 점검\n국토교통부, 재건축·재개발 정비사업 조합 위법행위 특별 현장점검 실시(10.19~)",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785169",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-14",
+      "agency": "행정안전부",
+      "title": "행안부, 따뜻한 변화 만든 공익활동 발굴, '제1회 대한민국 공익활동 임팩트 어워드' 개최",
+      "summary": "10월 14일, 「제1회 대한민국 공익활동 임팩트 어워드 및 컨퍼런스」 개최\n아이들 진로지원, 농촌 방문진료 등 삶의 변화를 만든 31개 프로그램 시상\n정부·기업·공익단체가 우수사례를 함께 나누고 나눔 문화 확산 모색   행정안전부(장관 윤호중)는 한국자선단체협의회, 한국자원봉사협의회, 더나은미래(주)와 함께 10월 14일(수) 전경련회관 그랜드볼룸에서「제1회 대한민국 공익활동 임팩트 어워드 및 나눔 컨퍼런스」를 개최했다고 밝혔다.  그간 우리 사회에는 많은 기업과 공익단체들이 아이들의 꿈을 지원하고, 도움이 필요한 이웃을 돌보며,",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785168",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-14",
       "agency": "국방부",
