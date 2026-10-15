@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "collected_at": "2026-10-15T09:25:49.447831+09:00",
+  "collected_at": "2026-10-15T10:09:06.036817+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,72 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-15",
+      "agency": "보건복지부",
+      "title": "건강검진 수검자 아니라도 국민 누구나 '국가통합바이오빅데이터' 참여 가능해진다",
+      "summary": "국가종합건강검진 수검자에서 국민 누구나 참여 가능하도록 기준 완화\n정은경 복지부 장관, 하정우 국가 AI 전략위원회 부위원장 등 보건의료·인공지능 분야 정책 관계자 40명과 생체 자료 기증 동참",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785266",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-15",
+      "agency": "과학기술정보통신부",
+      "title": "건강검진 수검자 아니라도 국민 누구나 '국가통합바이오빅데이터' 참여 가능해진다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785264",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-15",
+      "agency": "국가보훈부",
+      "title": "강윤진 차관， 미국 전직 연방의원단과 서울현충원 참배",
+      "summary": "261015 보도자료(강윤진 차관， 미국 전직 연방의원단과 서울현충원 참배)최종",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785263",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-15",
+      "agency": "국가보훈부",
+      "title": "제60회 전국상이군경체육대회 수원서 개최",
+      "summary": "261015 보도자료(제60회 전국상이군경체육대회 수원서 개최)최종",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785262",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-15",
+      "agency": "고용노동부",
+      "title": "고용노동부, 형이 확정된 중대산업재해 발생 사업장 37개소 공표",
+      "summary": "고용노동부(장관 김영훈)는 10월 15일(목), 중대재해 처벌 등에 관한 법률(이하, '중대재해처벌법')에 따라 중대산업재해 발생 사실을 관보(고용노동부 공고 제2026-475호)와 고용노동부 누리집*을 통해 공표했다.     * 고용노동부 누리집(www.moel.go.kr)\n뉴스·소식\n공지사항",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785250",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-15",
+      "agency": "산업통상부",
+      "title": "제17차 한-중 자유무역협정(FTA)  서비스·투자 후속협상 개최",
+      "summary": "ㅊ제17차 한-중 자유무역협정(FTA)서비스·투자 후속협상 개최\n10.12(월)~16(금), 서울 개최… 협상 진전으로 경제협력기반 강화\n우리나라와 중국 간 자유무역협정(FTA) 제17차 후속협상이 10.12(월)~ 10.16(금) 서울에서 개최되고 있다. 산업통상부(장관 김정관)는 이번 협상에 우리측 권혜진 통상교섭실장과 중국측 천 차오(Chen Chao) 중국 상무부 국제사 사장을 양국 수석대표로 하는 30여 명의 대표단이 참여한다고 밝혔다. 한-중 양국은 자유무역협정 체결시(`15년 발효) 서비스·투자 후속협상을 진행하여 자유",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785251",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-15",
       "agency": "산업통상부",
