@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "collected_at": "2026-10-20T04:47:47.031416+09:00",
+  "collected_at": "2026-10-20T08:09:13.400007+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -28,5 +28,50 @@
     "법제처",
     "식품의약품안전처"
   ],
-  "items": []
+  "items": [
+    {
+      "date": "2026-10-20",
+      "agency": "식품의약품안전처",
+      "title": "식약처, 화장품 점자 등 세부 표시 방법 안내",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785736",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-20",
+      "agency": "식품의약품안전처",
+      "title": "수능 앞둔 수험생 여러분, 카페인 함유 식품 섭취 시 주의하세요!",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785735",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-20",
+      "agency": "식품의약품안전처",
+      "title": "정부, 신생아·암환자 치료 의약품 등 국가필수의약품 8종 신규 지정",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785734",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-20",
+      "agency": "국토교통부",
+      "title": "모두의카드 카드정보 현행화하지 않은 이용자는 10월 26일까지 현행화하세요!",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785731",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    }
+  ]
 }
