@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "collected_at": "2026-10-22T17:35:33.974803+09:00",
+  "collected_at": "2026-10-22T23:03:35.698068+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,50 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-22",
+      "agency": "국무조정실",
+      "title": "[보도자료] 한성숙 국무총리, 제7차 주택공급 현장점검(舊 공항고등학교 부지)",
+      "summary": "도심 내 유휴 학교용지, 새 집으로 탈바꿈\n한 총리, \"8·13대책은 국민들과의 약속, 반드시 완수\" 강조\n한 총리, 舊 공항고 부지 방문…도심 유휴부지 활용한 주택신속공급 당부",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786212",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-22",
+      "agency": "국토교통부",
+      "title": "[참고] 국제교통포럼(ITF) 김영태 사무총장 3연임 가능성 열려",
+      "summary": "72개 회원국 교통관리이사회 투표(10.22) 결과 유효 투표수의 과반 찬성",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786213",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-22",
+      "agency": "외교부",
+      "title": "김진아 외교부 2차관, 국제앰네스티 사무총장 면담(10.22)",
+      "summary": "김진아 외교부 2차관은 10.22.(목) 서울에서 아녜스 칼라마르(Agnes Callamard) 국제앰네스티(Amnesty International) 사무총장을 면담하고, 인권과 법치 등 국제 현안에 대한 의견을 교환하였습니다.  김진아 차관은 우리 정부가 글로벌 책임강국으로서 인공지능(AI) 등 신기술과 인권, 여성 인권 등 다방면에서 인권 의제와 다자 규범을 주도하고 형성하기 위한 국제적 노력을 기울이고 있다고 설명하였습니다.  칼라마르 사무총장은 한국이 국제사회의 중요한 중견국으로서 보편적 인권 규범 준수 및 실질적 인권 증진",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786182",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-10-22",
+      "agency": "외교부",
+      "title": "한·중 해양경계획정 제16차 국장급 회담 개최(10.22.)",
+      "summary": "이 10.22.(목) 서울에서 개최됐다.  ※ 수석대표 : (우리측) 이석주 외교부 국제법률국장                        (중국측) 궈옌(郭燕, Guo Yan) 외교부 동황해사무대표  ※ 우리측 대표단으로 외교부, 해양수산부, 국방부, 해양경찰청, 국립해양조사원, 한국해양과학기술원 참석  한·중 해양경계획정 회담은 2014년 한중 정상 간 합의에 따라 2015년부터 공식 가동되어 왔다.  양측은 이번 회담에서 해양경계획정 관련 제반 사항들에 대해 심도 있는 의견을 교환했으며, 관련 논의를 지속해 나가는 것이 중요하다",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786179",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-22",
       "agency": "고용노동부",
