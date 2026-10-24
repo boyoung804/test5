@@ -1,6 +1,6 @@
 {
   "date": "2026-10-24",
-  "collected_at": "2026-10-24T13:29:23.869152+09:00",
+  "collected_at": "2026-10-24T18:03:39.355126+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,17 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-10-24",
+      "agency": "과학기술정보통신부",
+      "title": "아이들의 상상력이 인공지능을 만나는 첫 경험! 「전 국민 인공지능 경진대회」,  인공지능 창작대회 본선 개최",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156786340",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-10-24",
       "agency": "과학기술정보통신부",
