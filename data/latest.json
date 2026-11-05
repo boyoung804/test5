@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "collected_at": "2026-11-06T02:59:13.001386+09:00",
+  "collected_at": "2026-11-06T08:33:15.056706+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -28,5 +28,116 @@
     "법제처",
     "식품의약품안전처"
   ],
-  "items": []
+  "items": [
+    {
+      "date": "2026-11-06",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 식약처, '연조직고정용장치 허가심사 가이드라인(민원인안내서)' 마련",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788173",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] '대국민 단짠 탈출 공모전' 최우수 작품은",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788172",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "문화체육관광부",
+      "title": "'2026 코리아시즌', 태국·베트남에서 '케이-컬처' 빛나다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788167",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "문화체육관광부",
+      "title": "'2026 인문문화축제', 인공지능 시대에 '인문지능'을 묻다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788166",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 식약처, 신생아·소아환자의 치료를 위한 긴급도입 의료기기 신규 지정",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788171",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "외교부",
+      "title": "외교부 공관장 인사",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788174",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 독감(인플루엔자 A, B형) 진단키트 품질검사 결과 모두 적합",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788170",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "교육부",
+      "title": "강의실을 넘어 세계로, 반도체·인공지능(AI) 인재 한자리에 모이다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788164",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "국토교통부",
+      "title": "철도안전법 위반 철도운영기관 및 철도차량 정비조직 등에 과징금 부과 의결",
+      "summary": "시정명령 재위반, 차량정비조직 무단변경 4건 등 총 5건 약 2.5억 원",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788163",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-06",
+      "agency": "국토교통부",
+      "title": "'26년 공간정보 품질관리 수준 15.9% 향상",
+      "summary": "240개 중앙·지방정부 및 공공기관 대상 공간정보 품질관리 수준평가 완료",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788162",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    }
+  ]
 }
