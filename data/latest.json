@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "collected_at": "2026-11-10T00:58:46.550587+09:00",
+  "collected_at": "2026-11-10T09:07:50.360706+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -28,5 +28,83 @@
     "법제처",
     "식품의약품안전처"
   ],
-  "items": []
+  "items": [
+    {
+      "date": "2026-11-10",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 화장품 인체적용시험기관 대상 정책설명회 개최",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788516",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-10",
+      "agency": "식품의약품안전처",
+      "title": "식약처, 겨울철 다소비 수산물 집중 수거.검사",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788515",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-10",
+      "agency": "외교부",
+      "title": "G7 외교장관회의 계기 한-프랑스 외교장관회담(11.9.) 개최",
+      "summary": "G7 외교장관회의 참석을 위해 파리를 방문 중인 조현 외교장관은 현지 시간 11.9.(월) 오후 장-노엘 바로(Jean-Noël Barrot) 프랑스 외교장관과 회담을 갖고, 한-프랑스 우호 협력 증진 방안과 주요 지역 정세에 대해 의견을 교환하였다.    양 장관은 올해 수교 140주년을 맞은 한-프랑스 양국이 정상 상호방문 및 '글로벌 전략적 동반자'로의 관계 격상을 통해 양국 간 관계를 크게 발전시켰음을 평가하고, 첨단산업을 포함한 다양한 분야에서 호혜적이고 실질적인 협력을 지속 확대해 나가자고 하였다. 조 장관은 핵심 가치를",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788512",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-10",
+      "agency": "문화체육관광부",
+      "title": "창립 20주년 한국도핑방지위원회, 새로운 도약 다짐",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788514",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-10",
+      "agency": "문화체육관광부",
+      "title": "청와대 사랑채, 강원 지역문화 상징하는 전시와 특별공연 선사",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788513",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-10",
+      "agency": "중소벤처기업부",
+      "title": "K-소상공인 수출성과, '로컬'을 넘어 '글로컬'로 도약",
+      "summary": "글로벌 소상공인 육성사업 참여기업 수출액 전년 대비 56.3% 증가\n중소벤처기업부(장관 이소영, 이하 중기부)는 11월 10일(화), 해외 판로 개척을 지원하는 '글로벌 소상공인 육성사업' 선정 100개사의 수출 성과를 발표했다. 2026년 신규로 시작한 '글로벌 소상공인 육성 사업'은 소비재 분야에서 수출 잠재력이 높은 소상공인을 대상으로 수출 역량 강화 교육, 수출형 제품 개발 및 사업화(최대 1억원), 해외 소비재 박람회 참가 등을 단계적으로 지원해 해외 판로 개척을 돕는 사업이다. 올해 선정된 100개사 중 수출 실적이 있는",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788511",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-10",
+      "agency": "외교부",
+      "title": "외교전략정보본부장, 국제원자력기구(IAEA) 사무총장 면담(11.9.)",
+      "summary": "오스트리아 비엔나를 방문중인 정연두 외교전략정보본부장은 11.9.(월) 오전 라파엘 그로시(Rafael Grossi) 국제원자력기구(IAEA) 사무총장을 면담하였다.  정 본부장은 IAEA가 북핵 문제를 포함하여 국제 비확산 체제에서 중추적인 역할을 수행하고 있는 점을 평가하였다. 정 본부장은 최근 한반도 정세와 평화공존과 공동 성장의 한반도 실현을 위한 우리 정부의 노력을 설명하고, IAEA가 사무총장 명의 보고서 발간 등을 통해 북핵 문제에 대한 국제사회의 관심을 계속해서 환기해 나가길 기대한다고 하였다.  아울러 정 본부장은 ",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156788509",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    }
+  ]
 }
