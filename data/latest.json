@@ -1,6 +1,6 @@
 {
   "date": "2026-11-13",
-  "collected_at": "2026-11-13T04:05:11.215247+09:00",
+  "collected_at": "2026-11-13T09:16:10.575420+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -28,5 +28,83 @@
     "법제처",
     "식품의약품안전처"
   ],
-  "items": []
+  "items": [
+    {
+      "date": "2026-11-13",
+      "agency": "문화체육관광부",
+      "title": "취향이 문화가 되는 '요즘 청년', 대구에서 만나다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789076",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-13",
+      "agency": "식품의약품안전처",
+      "title": "[보도참고] 식약처, 장애인의 의약외품 안전정보 접근성 강화",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789077",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-13",
+      "agency": "과학기술정보통신부",
+      "title": "제27차 한·불 원자력 공동조정위원회 개최",
+      "summary": "한·불 정상회담 후속조치로 원자력공동조정위원회 수석대표 격상\n원자력 연구개발, 안전, 산업 등 3개 분야 21개 의제 협의",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789073",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-13",
+      "agency": "기후에너지환경부",
+      "title": "제27차 한·불 원자력공동조정위원회 개최",
+      "summary": "한·불 정상회담 후속조치로 원자력공동조정위원회 수석대표 격상▷ 원자력 연구개발, 안전, 산업 등 3개 분야 21개 의제 협의  【관련 국정과제】 26-4. 전략적 과학기술 국제협력으로 기술 주권 확보과학기술정보통신부(부총리 겸 장관 배경훈, 이하 '과기정통부')와 기후에너지환경부(장관 김성환, 이하 '기후부')는 프랑스 원자력·대체에너지청(CEA)과 공동으로 11월 12일(목)부터 11월 13일(금)까지 양일간 프랑스 사클레에서 제27차 한·불 원자력공동조정위원회(이하 '공동위')를 개최하였다고 밝혔다.'81년 「한·불 원자력 협력",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789074",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-13",
+      "agency": "국토교통부",
+      "title": "물류기업과 기술기업이 만나는  '협업의 장' 열린다",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789071",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-13",
+      "agency": "기후에너지환경부",
+      "title": "땅속 깊은 곳까지 더 안전하게… 지하수 조사 표준 마련",
+      "summary": "시추공 기반 심부 지질환경의 수리지질특성화 절차 국가표준 2종 제정기후에너지환경부 소속 국립환경과학원(원장 김영우)은 시추공 기반으로 땅속 깊은 곳의 지하수 특성을 조사하는 수리지질특성화 절차에 관한 고유표준 2건*을 개발하여 11월 13일에 국가표준(KS)으로 제정·고시한다고 밝혔다.* KS I 0957-1 「시추공 기반 심부 지질환경의 수리지질특성화\n제1부: 개요」, KS I 0957-2 「시추공 기반 심부 지질환경의 수리지질특성화\n제2부: 시추공 설계」이번 국가표준 제정은 지하 연구시설, 방사성 폐기물 처분시설, 석유 비축기지",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789072",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-13",
+      "agency": "외교부",
+      "title": "강금실 대통령 특사, 제31차 유엔기후변화협약 당사국총회(COP31) 정상회의 연설",
+      "summary": "'제31차 유엔기후변화협약 당사국총회(COP31) 정상회의(11.11.(수)-12.(목), 튀르키예 안탈리아)'에 대통령 특사로 참석 중인 강금실 글로벌기후환경대사는 11.12.(목) 정상회의 연설을 통해 기후위기 대응을 위한 국제사회의 공동 행동을 촉구하는 한편, 한국의 녹색 대전환 의지를 표명하였다.       ※ 정상회의 공식명칭 : 「Antalya Leaders Summit」    강 특사는 기후위기 대응을 위해서는 국제사회의 공동 노력과 함께 성장과 탈탄소화를 양립시키는 전환이 중요하다고 강조하였다. 이를 위한 대한민국의 ",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156789075",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    }
+  ]
 }
