@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "collected_at": "2026-11-21T10:49:36.056760+09:00",
+  "collected_at": "2026-11-21T17:53:15.678902+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,50 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-11-21",
+      "agency": "국토교통부",
+      "title": "[차관동정] 정의경 제2차관, \"안전을 최우선으로 탈선 현장 복구 및 이용객 불편 최소화할 것\"",
+      "summary": "21일 오후 탈선사고 현장 점검 및 가용한 대체열차 투입 당부",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790153",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-21",
+      "agency": "과학기술정보통신부",
+      "title": "우리 사회의 인공지능을 생각하고 토론하는 축제의 장, ｢AI 인사이트 페스티벌 시상식｣ 개최",
+      "summary": "인공지능 기술에 대한 비판적 사고와 창의적 관점을 높이기 위한 '토론대회'부터 '논문·아이디어 공모전', '우수도서 선정'까지 한자리에",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790152",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-21",
+      "agency": "국토교통부",
+      "title": "[참고] 경부선 소정리역 화물열차 탈선 사고 대응에 만전을 기하고 있습니다.",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790144",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-21",
+      "agency": "과학기술정보통신부",
+      "title": "미래의 피지컬 AI 전문가 발굴!  「2026 청소년 로보틱스 챌린지」 결선 개최",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790143",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-11-21",
       "agency": "고용노동부",
