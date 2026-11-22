@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "collected_at": "2026-11-23T01:51:39.215691+09:00",
+  "collected_at": "2026-11-23T07:14:14.109915+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -28,5 +28,17 @@
     "법제처",
     "식품의약품안전처"
   ],
-  "items": []
+  "items": [
+    {
+      "date": "2026-11-23",
+      "agency": "교육부",
+      "title": "교육부, 「대입 허위 원서접수 신고센터 」 설치",
+      "summary": "",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156790263",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    }
+  ]
 }
