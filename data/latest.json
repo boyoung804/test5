@@ -1,6 +1,6 @@
 {
   "date": "2026-11-28",
-  "collected_at": "2026-11-28T12:59:20.352973+09:00",
+  "collected_at": "2026-11-28T21:53:07.731610+09:00",
   "agencies": [
     "대통령실",
     "국무조정실",
@@ -29,6 +29,28 @@
     "식품의약품안전처"
   ],
   "items": [
+    {
+      "date": "2026-11-28",
+      "agency": "국무조정실",
+      "title": "[보도자료] 제1차 청년미래콘서트(취·창업편)",
+      "summary": "한 총리, \"실패해도 다시 시작할 수 있는 든든한 힘이 될 것\"\n'청년미래콘서트'서 청년들과 취·창업 고민 나눠\n국무조정실, 취·창업 정보와 멘토링 한자리에··· 청년 도전 지원",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156791262",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
+    {
+      "date": "2026-11-28",
+      "agency": "과학기술정보통신부",
+      "title": "[보도참고] 초대형 사업 인공지능 데이터센터, 동해에서 떠오르다",
+      "summary": "동해 1.2GW급 GS 인공지능 데이터센터 착공식 개최\nGS, 동해 인공지능 데이터센터 구축 및 지역상생 계획 공개",
+      "link": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156791260",
+      "unverified": false,
+      "media_press": "",
+      "media_title": "",
+      "media_link": ""
+    },
     {
       "date": "2026-11-28",
       "agency": "보건복지부",
